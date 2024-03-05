@@ -3,9 +3,10 @@ package org.example.singleton.demo4;
 public class DoubleCheckSingleton {
     private DoubleCheckSingleton(){}
 
-    private static DoubleCheckSingleton instance;
+    // 使用 volatile 关键字确保 instance 在所有线程中同步
+    private static volatile DoubleCheckSingleton instance;
 
-    public DoubleCheckSingleton getInstance(){
+    public static DoubleCheckSingleton getInstance(){
         if(instance == null){
             synchronized (DoubleCheckSingleton.class){
                 if(instance == null){
