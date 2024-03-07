@@ -1,0 +1,8 @@
+package org.example.builder.demo1;
+
+public interface PizzaBuilder {
+    void buildDough();
+    void buildSauce();
+    void buildTopping();
+    Pizza getPizza();
+}
