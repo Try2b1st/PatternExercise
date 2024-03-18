@@ -23,3 +23,4 @@ public class Client {
         paymentContext.pay(120.0);
     }
 }
+
